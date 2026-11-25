@@ -1,0 +1,12 @@
+---
+import { TOPICS } from '../config';
+import { fmt } from '../lib/articles';
+const { entry } = Astro.props;
+const t = TOPICS[entry.data.topic];
+---
+<a class="card" href={`/articles/${entry.id}/`} data-cat={entry.data.topic}>
+  <span class="lab"><span class={t.num ? 'hx' : 'hx g'}>{t.num}</span>{t.label}</span>
+  <h3>{entry.data.title}</h3>
+  <p>{entry.data.description}</p>
+  <span class="meta">{fmt(entry.data.date)} · {entry.data.readTime}</span>
+</a>

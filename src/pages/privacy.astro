@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../config';
+---
+<Base title="Privacy policy" description="How Bear Ops handles the personal information you send us.">
+<!-- DRAFT: have a lawyer review this before launch and update it to match the tools you actually use. -->
+<main><div class="wrap"><article class="art legal">
+  <h1>Privacy policy</h1>
+  <p>This policy explains what personal information {SITE.legalName} collects through this website, why, and what your rights are.</p>
+  <h2>Who we are</h2>
+  <p>{SITE.legalName} is a business based in {SITE.country}. You can reach us at <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+  <h2>What we collect</h2>
+  <ul>
+    <li>Details you send through the contact form, the booking pop-up or by email, such as your name, work email, company and what you tell us about your business.</li>
+    <li>Standard technical information that our hosting provider records when you visit, such as your IP address and browser type.</li>
+  </ul>
+  <h2>Why we use it</h2>
+  <p>We use your details to reply to you, arrange calls and, if we work together, provide our services. We do this because you asked us to, or because we have a legitimate interest in responding to business enquiries.</p>
+  <h2>Who else handles it</h2>
+  <p>We use service providers for hosting, email, scheduling and forms. They process information on our behalf. This site also loads fonts from Google Fonts, which means your browser contacts Google when a page loads. We do not sell your information.</p>
+  <h2>Cookies and analytics</h2>
+  <p>This site does not use advertising cookies. If we add analytics later, we will update this page.</p>
+  <h2>How long we keep it</h2>
+  <p>We keep enquiry details for as long as needed to deal with your request and for a reasonable time afterwards. You can ask us to delete them at any time.</p>
+  <h2>Where it is processed</h2>
+  <p>We are in {SITE.country}, and our providers may process information in other countries. We take reasonable steps to protect it wherever it is handled.</p>
+  <h2>Your rights</h2>
+  <p>Depending on where you live, you may have the right to see the information we hold about you, correct it, delete it or object to how we use it. Email us to ask. You can also complain to your local data protection authority, such as South Africa's Information Regulator or the UK Information Commissioner's Office.</p>
+  <h2>Changes</h2>
+  <p>We may update this policy from time to time. The latest version is always on this page.</p>
+</article></div></main>
+</Base>

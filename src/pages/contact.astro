@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../config';
+---
+<Base title="Contact" description="Book a free 30-minute call. You leave with three specific fixes for your biggest bottlenecks, whether or not we work together.">
+<main><div class="wrap"><div class="cgrid">
+  <div>
+    <h1>Talk to us</h1>
+    <p class="lead">Tell us a little about your business and we will arrange a free 30-minute call.</p>
+    <ol class="stp">
+      <li><b>You tell us how a deal moves today</b><span>From first lead to payment, in your own words.</span></li>
+      <li><b>We look for the bottlenecks</b><span>Where work waits, repeats or gets lost.</span></li>
+      <li><b>You leave with three specific fixes</b><span>Whether or not we work together.</span></li>
+    </ol>
+    <p class="mail">Prefer email? <a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
+  </div>
+  <div>
+    <div class="fm">
+      <h2>Request your free call</h2>
+      <form data-f novalidate>
+        <div class="fl">
+          <div class="two2">
+            <div class="f"><label for="c1">Name</label><input id="c1" name="name" autocomplete="name" required /></div>
+            <div class="f"><label for="c2">Work email</label><input id="c2" name="email" type="email" autocomplete="email" required /></div>
+          </div>
+          <div class="two2">
+            <div class="f"><label for="c3">Company</label><input id="c3" name="company" autocomplete="organization" required /></div>
+            <div class="f"><label for="c4">Company size</label>
+              <select id="c4" name="size"><option>1 to 10 people</option><option>11 to 50 people</option><option>51 to 200 people</option><option>More than 200</option></select>
+            </div>
+          </div>
+          <div class="f"><label for="c5">Where does it get stuck most?</label>
+            <select id="c5" name="stage"><option>Not sure yet</option><option>Lead follow-up</option><option>Deal handover</option><option>Go-live</option><option>Invoicing</option><option>Collections</option><option>Renewals</option><option>Something else</option></select>
+          </div>
+          <div class="f"><label for="c6">What is slowing you down?</label><textarea id="c6" name="note" rows="4"></textarea></div>
+          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button class="btn" type="submit">Request the free call</button>
+        </div>
+        <div class="ok" role="status"><h3>Thanks, we have your request.</h3><p></p></div>
+      </form>
+    </div>
+    {SITE.bookingUrl && <div class="cal"><a class="btn" href={SITE.bookingUrl}>Pick a time yourself</a></div>}
+  </div>
+</div></div></main>
+</Base>

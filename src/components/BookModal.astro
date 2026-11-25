@@ -1,0 +1,21 @@
+---
+import { SITE } from '../config';
+---
+<dialog id="book" aria-labelledby="mt">
+  <div class="mc">
+    <button type="button" class="x" aria-label="Close">&times;</button>
+    <h2 id="mt">Book a free 30-minute call</h2>
+    <p class="sbt">You leave with three specific fixes for your biggest bottlenecks, whether or not we work together.</p>
+    <form data-f novalidate>
+      <div class="fl">
+        <div class="f"><label for="m1">Name</label><input id="m1" name="name" autocomplete="name" required /></div>
+        <div class="f"><label for="m2">Work email</label><input id="m2" name="email" type="email" autocomplete="email" required /></div>
+        <div class="f"><label for="m3">Biggest bottleneck right now (optional)</label><textarea id="m3" name="note" rows="3"></textarea></div>
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button class="btn" type="submit">Book my free call</button>
+        {SITE.bookingUrl && <p class="alt-link">Prefer to pick a time yourself? <a href={SITE.bookingUrl}>Open the calendar</a></p>}
+      </div>
+      <div class="ok" role="status"><h3>Thanks, we have your request.</h3><p></p></div>
+    </form>
+  </div>
+</dialog>

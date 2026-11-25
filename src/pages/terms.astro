@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../config';
+---
+<Base title="Terms of use" description="The terms for using the Bear Ops website.">
+<!-- DRAFT: have a lawyer review this before launch. -->
+<main><div class="wrap"><article class="art legal">
+  <h1>Terms of use</h1>
+  <p>By using this website you agree to these terms. If you do not agree, please do not use it.</p>
+  <h2>What this site is</h2>
+  <p>This site describes the services of {SITE.legalName} and shares articles about business operations. Any services we provide are covered by a separate written agreement.</p>
+  <h2>General information only</h2>
+  <p>The articles and other content are general information. They are not legal, financial or other professional advice, and you should consider your own circumstances before acting on them.</p>
+  <h2>No guarantees</h2>
+  <p>We take care to keep the site accurate, but we do not guarantee that it is complete, current or free of errors, or that it will always be available.</p>
+  <h2>Our content</h2>
+  <p>The text, design and logo on this site belong to {SITE.legalName}. You may share links to our pages and quote short extracts with credit. Please ask before copying more.</p>
+  <h2>Links to other sites</h2>
+  <p>We are not responsible for the content or practices of sites we link to.</p>
+  <h2>Limit of liability</h2>
+  <p>To the extent the law allows, we are not liable for any loss that results from using this site or relying on its content.</p>
+  <h2>Governing law</h2>
+  <p>These terms are governed by the laws of {SITE.country}.</p>
+  <h2>Contact</h2>
+  <p>Questions about these terms can go to <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+</article></div></main>
+</Base>

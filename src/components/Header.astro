@@ -1,0 +1,15 @@
+---
+import { getArticles } from '../lib/articles';
+const path = Astro.url.pathname;
+const hasArticles = (await getArticles()).length > 0;
+---
+<header><div class="wrap">
+  <a class="logo" href="/" aria-label="Bear Ops, home"><svg class="lk" viewBox="0 0 290 64" role="img" aria-label="Bear Ops. Systems, processes, people"><g transform="translate(32,32) scale(.735)"><polygon transform="translate(-19.5,-22.5)" points="24,0 12,20.8 -12,20.8 -24,0 -12,-20.8 12,-20.8" style="fill:var(--accent)"/><polygon transform="translate(-19.5,22.5)" points="24,0 12,20.8 -12,20.8 -24,0 -12,-20.8 12,-20.8" style="fill:var(--ink)"/><polygon transform="translate(19.5,0)" points="24,0 12,20.8 -12,20.8 -24,0 -12,-20.8 12,-20.8" style="fill:var(--amber)"/></g><text x="84" y="37" textLength="204" lengthAdjust="spacing" style="font:600 37px var(--head);fill:var(--ink)">Bear <tspan style="fill:var(--accent)">Ops</tspan></text><text x="84" y="58" textLength="204" lengthAdjust="spacing" style="font:500 12.5px var(--sans);fill:var(--ink)">Systems <tspan style="fill:var(--amber)">|</tspan> Processes <tspan style="fill:var(--amber)">|</tspan> People</text></svg></a>
+  <nav aria-label="Main">
+    <a href="/#why">Why Bear Ops</a>
+    <a href="/#how">How we work</a>
+    {hasArticles && <a href="/articles/" aria-current={path.startsWith('/articles') ? 'page' : undefined}>Articles</a>}
+    <a href="/contact/" aria-current={path === '/contact/' ? 'page' : undefined}>Contact</a>
+    <a class="btn" href="/contact/" data-open>Book a call</a>
+  </nav>
+</div></header>

@@ -1,0 +1,144 @@
+---
+import Base from '../layouts/Base.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { getArticles } from '../lib/articles';
+const latest = (await getArticles()).slice(0, 3);
+---
+<Base>
+<main>
+  <div class="wrap">
+    <div class="hero">
+      <h1>We focus on the bottlenecks choking your growth, while you focus on running the business.</h1>
+      <div class="hero-row">
+        <p class="sub">We take ownership of how work moves through your SaaS company, from first lead to renewal. We find where it gets stuck, design the fix and see it through until your team is using it, so customers go live sooner, invoices get paid faster and your team spends less time on manual work. One flat monthly fee covers all of it.</p>
+        <div>
+          <p class="strip">For growing SaaS and tech companies. Sales, onboarding, billing, support and more.</p>
+          <a class="btn" href="/contact/" data-open>Book a free 30-minute call</a><a class="lnk" href="#how">See how we work</a>
+          <p class="note">We look at how a deal moves through your business from first lead to payment, and you leave with the three bottlenecks we would fix first.</p>
+        </div>
+      </div>
+      <div class="flow">
+        <p class="ft">Where growth gets blocked in a SaaS business</p>
+        <div class="fx"><svg id="flow" viewBox="0 0 1040 250" role="img" aria-label="A flow from first lead to renewal with six numbered points where work backs up and growth is held below what it could be"><polygon class="gf" points="20,120 168,110 316,96 464,80 612,62 760,46 908,36 1020,28 1020,105 908,107 760,109 612,112 464,115 316,117 168,119 20,120"/><polyline class="gp" points="20,120 168,110 316,96 464,80 612,62 760,46 908,36 1020,28"/><polyline class="ga" points="20,120 168,119 316,117 464,115 612,112 760,109 908,107 1020,105"/><text class="gl" x="1020" y="16" text-anchor="end" style="fill:var(--accent)">Growth you could have</text><text class="gl" x="1020" y="126" text-anchor="end" style="fill:var(--ink)">Growth you get</text><line class="cn" x1="128" y1="202" x2="162" y2="202"/><polygon class="ar" points="168,202 161,197 161,207"/><line class="st" x1="148" y1="166" x2="148" y2="188"/><circle class="db p" style="--i:0" cx="136" cy="160" r="5"/><circle class="db p" style="--i:1" cx="148" cy="160" r="5"/><circle class="db p" style="--i:2" cx="160" cy="160" r="5"/><circle class="db p" style="--i:3" cx="142" cy="148" r="5"/><circle class="db p" style="--i:4" cx="154" cy="148" r="5"/><circle class="db p" style="--i:5" cx="148" cy="137" r="5"/><circle class="vl" cx="148" cy="202" r="13"/><text class="vn" x="148" y="207">1</text><line class="cn" x1="276" y1="202" x2="310" y2="202"/><polygon class="ar" points="316,202 309,197 309,207"/><line class="st" x1="296" y1="166" x2="296" y2="188"/><circle class="db p" style="--i:6" cx="284" cy="160" r="5"/><circle class="db p" style="--i:7" cx="296" cy="160" r="5"/><circle class="db p" style="--i:8" cx="308" cy="160" r="5"/><circle class="db p" style="--i:9" cx="290" cy="148" r="5"/><circle class="db p" style="--i:10" cx="302" cy="148" r="5"/><circle class="db p" style="--i:11" cx="296" cy="137" r="5"/><circle class="vl" cx="296" cy="202" r="13"/><text class="vn" x="296" y="207">2</text><line class="cn" x1="424" y1="202" x2="458" y2="202"/><polygon class="ar" points="464,202 457,197 457,207"/><line class="st" x1="444" y1="166" x2="444" y2="188"/><circle class="db p" style="--i:12" cx="432" cy="160" r="5"/><circle class="db p" style="--i:13" cx="444" cy="160" r="5"/><circle class="db p" style="--i:14" cx="456" cy="160" r="5"/><circle class="db p" style="--i:15" cx="438" cy="148" r="5"/><circle class="db p" style="--i:16" cx="450" cy="148" r="5"/><circle class="db p" style="--i:17" cx="444" cy="137" r="5"/><circle class="vl" cx="444" cy="202" r="13"/><text class="vn" x="444" y="207">3</text><line class="cn" x1="572" y1="202" x2="606" y2="202"/><polygon class="ar" points="612,202 605,197 605,207"/><line class="st" x1="592" y1="166" x2="592" y2="188"/><circle class="db p" style="--i:18" cx="580" cy="160" r="5"/><circle class="db p" style="--i:19" cx="592" cy="160" r="5"/><circle class="db p" style="--i:20" cx="604" cy="160" r="5"/><circle class="db p" style="--i:21" cx="586" cy="148" r="5"/><circle class="db p" style="--i:22" cx="598" cy="148" r="5"/><circle class="db p" style="--i:23" cx="592" cy="137" r="5"/><circle class="vl" cx="592" cy="202" r="13"/><text class="vn" x="592" y="207">4</text><line class="cn" x1="720" y1="202" x2="754" y2="202"/><polygon class="ar" points="760,202 753,197 753,207"/><line class="st" x1="740" y1="166" x2="740" y2="188"/><circle class="db p" style="--i:24" cx="728" cy="160" r="5"/><circle class="db p" style="--i:25" cx="740" cy="160" r="5"/><circle class="db p" style="--i:26" cx="752" cy="160" r="5"/><circle class="db p" style="--i:27" cx="734" cy="148" r="5"/><circle class="db p" style="--i:28" cx="746" cy="148" r="5"/><circle class="db p" style="--i:29" cx="740" cy="137" r="5"/><circle class="vl" cx="740" cy="202" r="13"/><text class="vn" x="740" y="207">5</text><line class="cn" x1="868" y1="202" x2="902" y2="202"/><polygon class="ar" points="908,202 901,197 901,207"/><line class="st" x1="888" y1="166" x2="888" y2="188"/><circle class="db p" style="--i:30" cx="876" cy="160" r="5"/><circle class="db p" style="--i:31" cx="888" cy="160" r="5"/><circle class="db p" style="--i:32" cx="900" cy="160" r="5"/><circle class="db p" style="--i:33" cx="882" cy="148" r="5"/><circle class="db p" style="--i:34" cx="894" cy="148" r="5"/><circle class="db p" style="--i:35" cx="888" cy="137" r="5"/><circle class="vl" cx="888" cy="202" r="13"/><text class="vn" x="888" y="207">6</text><rect class="nr" x="20" y="170" width="108" height="64" rx="4"/><text class="nt" x="74" y="207">Lead</text><rect class="nr" x="168" y="170" width="108" height="64" rx="4"/><text class="nt" x="222" y="207">Signed deal</text><rect class="nr" x="316" y="170" width="108" height="64" rx="4"/><text class="nt" x="370" y="207">Onboarding</text><rect class="nr" x="464" y="170" width="108" height="64" rx="4"/><text class="nt" x="518" y="207">Live</text><rect class="nr" x="612" y="170" width="108" height="64" rx="4"/><text class="nt" x="666" y="207">Invoiced</text><rect class="nr" x="760" y="170" width="108" height="64" rx="4"/><text class="nt" x="814" y="207">Paid</text><rect class="nr" x="908" y="170" width="108" height="64" rx="4"/><text class="nt" x="962" y="207">Renewal</text></svg></div>
+        <ol class="blk"><li><span class="bn">1</span><b>Lead follow-up</b>Leads wait in the CRM with no clear owner, so deals go cold.</li><li><span class="bn">2</span><b>Deal handover</b>Details travel in a Slack message, so onboarding starts without them.</li><li><span class="bn">3</span><b>Go-live</b>Waits on one person, so new customers go live weeks late.</li><li><span class="bn">4</span><b>Invoicing</b>Raised by hand, so billing runs behind.</li><li><span class="bn">5</span><b>Collections</b>Chased manually, so cash arrives late.</li><li><span class="bn">6</span><b>Renewals</b>Noticed too late, so customers leave before anyone speaks to them.</li></ol>
+      </div>
+    </div>
+    <div class="pipe">
+      <div class="pipe-head">
+        <div><h2>See where customers get stuck</h2><p class="hint">Select a stage to see a typical bottleneck there and how we resolve it. The switch shows the same stage before and after.</p></div>
+        <div class="seg" role="group" aria-label="Before or after"><button type="button" data-mode="b" aria-pressed="true">Before</button><button type="button" data-mode="a" aria-pressed="false">After</button></div>
+      </div>
+      <svg id="pipe" viewBox="0 0 900 140" aria-hidden="true"></svg>
+      <div class="stages" id="stages"></div>
+      <div class="det" id="det" aria-live="polite"></div>
+    </div>
+  </div>
+  </main>
+
+<section class="sec"><div class="wrap split">
+  <h2>The systems that got you started can’t keep up with growth</h2><div>
+  <p class="body">The processes you built as a startup worked when you had a handful of customers. Deals were handed over in a Slack message, onboarding was done by whoever had time, invoices were raised by hand, and someone on the team knew where every customer stood. As you scale, those same processes start to break. New customers wait weeks to go live, invoices go out late, support tickets bounce between teams, renewals get noticed too late, and someone rebuilds the same report by hand every month.</p>
+  <p class="body">You can probably see most of these problems already. The difficulty is that nobody has the time to fix them. Your developers are working through the product backlog, your team leads are running their own teams, and you are pulled into everything else. Nobody’s job is to look at how a customer moves from first lead to renewal and keep improving it, so the problems wait until they cost you revenue or customers. Then they get fixed in a hurry.</p>
+</div>
+</div></section>
+
+<section class="sec alt"><div class="wrap split">
+  <h2>We take ownership of it</h2><div>
+  <p class="body">We take responsibility for continuously improving your operations. We start by mapping how work moves from first lead through the sale, onboarding, billing, support and renewal, and we put numbers on where it slows down. Then we take the biggest bottleneck, find the cause, and design the fix. Where the fix involves your systems, you see a clickable prototype before anything is built, so you can approve it before any build time is spent. We then see the fix through. We write the specification where something has to be built, write the procedure and train your team where it does not, test the result, and manage the rollout so your team adopts it.</p>
+  <p class="body">Once one bottleneck is cleared, the next one becomes the thing holding back your growth, and we move on to it. You pay one flat monthly fee for this ongoing work.</p>
+</div>
+</div></section>
+
+<section class="sec" id="why"><div class="wrap split">
+  <h2>Why Bear Ops</h2>
+  <div>
+    <p class="body">Bear Ops offers business optimisation for growing SaaS companies. We work in the space between two roles you may already know. A fractional COO usually carries out the CEO’s strategy, builds teams and runs the day-to-day business. A RevOps specialist focuses on the systems and processes around generating revenue.</p>
+    <p class="body">We take ownership of the full set of systems and processes that run your business, across marketing, sales, support, finance, development and more. We look at how each part of your business connects to the others and to your customers, find the bottlenecks and blockers, and design the fixes.</p>
+    <p class="body">That includes process design, automation, AI implementation, system integrations, standard operating procedures (SOPs), business knowledge capture and transfer, reporting and dashboards, tool selection, change management and training, and more. There is no one-size-fits-all solution, so we make sure the best tools are applied to your specific needs.</p>
+  </div>
+</div></section>
+
+<section class="sec" id="how"><div class="wrap">
+  <h2>How we work</h2>
+  <p class="lead">Each bottleneck goes through the same four steps. Your part is small, so your team keeps running the business.</p>
+  <div class="steps">
+    <div class="step"><span class="n">1</span><h3>Find it</h3><p><b>We:</b> map how work really moves through your business and measure a handful of numbers.</p><p><b>You:</b> give us read access to your tools and about an hour with each team lead.</p></div>
+    <div class="step"><span class="n">2</span><h3>Design the fix</h3><p><b>We:</b> design the fix, with a clickable prototype where it involves your systems.</p><p><b>You:</b> review the prototype and approve it.</p></div>
+    <div class="step"><span class="n">3</span><h3>Put it in place</h3><p><b>We:</b> carry the fix through to the end, whether that is a procedure with training, an automation, or a change your developers or dev house build, and test the result.</p><p><b>You:</b> make the right people available when a fix needs them.</p></div>
+    <div class="step"><span class="n">4</span><h3>Make it stick</h3><p><b>We:</b> update the written processes, train your team and check the numbers again.</p><p><b>You:</b> tell us what is working and what is not.</p></div>
+  </div>
+  <div class="loop"><p class="body" style="margin:0">When step 4 is done, the next bottleneck becomes the one holding back your growth, and we start again at step 1. Where it makes sense, we use automation and AI tools, with your approval, to take repetitive manual work off your team.</p></div>
+</div></section>
+
+<section class="sec" id="terms"><div class="wrap">
+  <h2>What you get and the terms</h2>
+  <div class="two">
+    <div>
+      <ul class="plain">
+        <li>A baseline of the numbers that matter in your first month.</li>
+        <li>A ranked list of your bottlenecks, with the cost of each.</li>
+        <li>A designed fix for each one, with a clickable prototype.</li>
+        <li>Written specifications for anything that needs building, clear enough to build from without a second meeting.</li>
+        <li>Updated written processes and team training.</li>
+        <li>A short review each month of what changed in the numbers.</li>
+      </ul>
+    </div>
+    <div>
+      <p style="margin:0 0 10px"><b>Numbers we track</b></p>
+      <ul class="plain">
+        <li>Days from signed deal to live customer.</li>
+        <li>Days to collect payment.</li>
+        <li>First response time on support.</li>
+        <li>Renewal rate.</li>
+        <li>Hours of manual admin each week.</li>
+      </ul>
+    </div>
+  </div>
+  <dl class="spec">
+    <div><dt>Fee</dt><dd><span class="price">From $4,000 a month</span><br>One flat monthly fee. We agree the level on the call, based on how many problems are open and how fast they need to move.</dd></div>
+    <div><dt>Commitment</dt><dd>The first 3 months are fixed, then it continues month to month.</dd></div>
+    <div><dt>Changing level</dt><dd>You can move up or down as your needs change. Moving up starts a new 3-month minimum on the higher level, because we need to free up the hours for you. Moving down needs one calendar month’s notice.</dd></div>
+    <div><dt>Notice</dt><dd>30 days. Full service and a proper handover carry on through the notice period.</dd></div>
+    <div><dt>What we need from you</dt><dd>A named owner, a contact for your developers or dev house when a fix needs building, about two hours a month of your time, and read access to your tools. Nothing changes without your approval.</dd></div>
+  </dl>
+</div></section>
+
+{latest.length > 0 && (
+<section class="sec" id="articles"><div class="wrap">
+  <h2>Latest articles</h2>
+  <div class="grid">
+    {latest.map((a) => <ArticleCard entry={a} />)}
+  </div>
+  <p class="alt-link"><a href="/articles/">All articles</a></p>
+</div></section>
+)}
+
+<section class="sec" id="about"><div class="wrap split">
+  <h2>About</h2><div>
+  <p class="lead">Our work is led by an operator with 12 years in operations, 11 of them inside SaaS businesses, across sales, onboarding, support, finance and product, and a certified Project Management Professional (PMP). We work from South Africa, with good overlap with European hours and US mornings.</p>
+</div>
+</div></section>
+
+<section class="sec" id="faq"><div class="wrap split">
+  <h2>Questions you may have</h2><div>
+  <div class="faq">
+    <details><summary>How is this different from hiring someone full-time?</summary><p>A full-time operations hire makes sense once there is enough work to fill the week. Until then, you get senior time on the bottlenecks that matter for one flat monthly fee. When you do hire, we hand over what we have built so they start with the processes, numbers and specs already in place.</p></details>
+    <details><summary>How is this different from a RevOps consultant?</summary><p>RevOps consultants mostly work on the revenue side: the CRM, the pipeline and reporting for sales and marketing. We cover the whole path from first lead to renewal, which includes the sales process, onboarding, billing and support, and we stay involved until the fixes are in place.</p></details>
+    <details><summary>Who puts the fixes in place?</summary><p>It depends on the fix. Procedures, training and the rollout we handle with your team. Anything that needs software built is built by your developers or a dev house. We design it, write the specification, answer their questions during the build and test the result before it goes live.</p></details>
+    <details><summary>What happens after the first three months?</summary><p>The engagement continues month to month. You can end it with 30 days’ notice, and we keep working and hand everything over properly during that time.</p></details>
+    <details><summary>Do you use AI?</summary><p>Where it takes repetitive manual work off your team, yes, and always with your approval. It is one of the tools we use to remove a bottleneck, and the work itself is finding the cause and getting the fix built and adopted.</p></details>
+  </div>
+</div>
+</div></section>
+
+<div class="wrap" id="book">
+  <div class="cta">
+    <h2>Book a free 30-minute call</h2>
+    <p class="lead">Tell us how a deal moves through your business today. We will give you three specific fixes, whether or not we work together.</p>
+    <a class="btn" href="/contact/" data-open>Choose a time</a>
+  </div>
+</div>
+
+
+<script is:inline src="/home.js" defer></script>
+</Base>
