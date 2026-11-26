@@ -282,3 +282,6 @@ footer a{color:inherit}
 .bubble.prob{border-color:var(--amber)}.bubble.prob::before{background:var(--amber)}
 .bubble.sol{border-color:var(--accent)}.bubble.sol::before{background:var(--accent)}
 .bubble+h2::before{display:none}
+.sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.ic{display:grid;place-items:center;width:46px;height:46px;border-radius:10px;background:var(--accent);color:#fff}.ic svg{width:24px;height:24px}
+.step .sh .n{font:500 30px/1 var(--head);color:var(--muted);opacity:.45;margin:0}
