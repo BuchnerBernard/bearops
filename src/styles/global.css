@@ -274,7 +274,7 @@ footer a{color:inherit}
 .alt-link{margin:18px 0 0;font-size:15px;color:var(--muted)}
 .alt-link a{color:var(--accent)}
 
-.plist{margin:14px 0 0;padding-left:20px}.plist li{margin:4px 0;padding-left:4px}.plist li::marker{color:var(--amber)}
+.plist{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}.plist li{position:relative;padding-left:32px}.plist li::before{content:"";position:absolute;left:0;top:.2em;width:20px;height:20px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23E39A0B' fill-opacity='.18'/%3E%3Cpath d='M7 7l6 6M13 7l-6 6' stroke='%23B97A00' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center/contain}
 .start{max-width:46em;margin-top:28px}.start h3,.then{font-size:20px;margin:0}
 .start+.steps{margin-top:44px}
 .bubble{display:inline-flex;align-items:center;gap:8px;padding:5px 13px;border-radius:999px;border:1.5px solid;font:600 13px var(--sans);color:var(--ink);margin-bottom:16px}
