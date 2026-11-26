@@ -276,4 +276,4 @@ footer a{color:inherit}
 
 .plist{margin:14px 0 0;padding-left:20px}.plist li{margin:4px 0;padding-left:4px}.plist li::marker{color:var(--amber)}
 .start{max-width:46em;margin-top:28px}.start h3,.then{font-size:20px;margin:0}
-.then{margin-top:44px}
+.start+.steps{margin-top:44px}
