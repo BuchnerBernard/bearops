@@ -277,3 +277,8 @@ footer a{color:inherit}
 .plist{margin:14px 0 0;padding-left:20px}.plist li{margin:4px 0;padding-left:4px}.plist li::marker{color:var(--amber)}
 .start{max-width:46em;margin-top:28px}.start h3,.then{font-size:20px;margin:0}
 .start+.steps{margin-top:44px}
+.bubble{display:inline-flex;align-items:center;gap:8px;padding:5px 13px;border-radius:999px;border:1.5px solid;font:600 13px var(--sans);color:var(--ink);margin-bottom:16px}
+.bubble::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.bubble.prob{border-color:var(--amber)}.bubble.prob::before{background:var(--amber)}
+.bubble.sol{border-color:var(--accent)}.bubble.sol::before{background:var(--accent)}
+.bubble+h2::before{display:none}
